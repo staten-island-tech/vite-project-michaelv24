@@ -37,6 +37,7 @@ body,
 }
 .hero{
     background-color: var(--light-blue);
+    font-size: 100px;
 }
 .main{
     background-color: var(--secondary);
