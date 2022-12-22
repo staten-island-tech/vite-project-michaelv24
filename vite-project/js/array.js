@@ -90,3 +90,7 @@ const items = [
     console: "Anime Collectible",
   },
 ];
+
+const typesVideoGame = items.filter((item) => item === "Video Game");
+
+console.log(typesVideoGame);
