@@ -1,4 +1,6 @@
-const items = [
+export { stock };
+
+const stock = [
   {
     name: "Pokemon Scarlet and Violet",
     type: "Video Game",
@@ -90,7 +92,3 @@ const items = [
     console: "Anime Collectible",
   },
 ];
-
-const typesVideoGame = items.filter((item) => item === "Video Game");
-
-console.log(typesVideoGame);
