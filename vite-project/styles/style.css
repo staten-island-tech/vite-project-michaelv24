@@ -1,18 +1,14 @@
 @import url(variables.css);
 
-:root{
+:root {
   --black: #000;
-  --light-yellow:#f1ff29;
+  --light-yellow: #f1ff29;
   --dark-yellow: #b6a80f;
   --light-purple: #d671f8;
   --dark-purple: #7b26dc;
   --gray: #252c30;
 
-
-
-
-
-/* Typography */
+  /* Typography */
   --h1: 7.594rem;
   --h2: 5.063rem;
   --h3: 3.375rem;
@@ -20,49 +16,48 @@
   --h5: 1.5rem;
 }
 
-.yel{
+.yel {
   --primary: var(--light-yellow);
   --secondary: var(--dark-yellow);
-  
 }
 
-.purp{
+.purp {
   --primary: var(--light-purple);
   --secondary: var(--dark-purple);
-  
 }
 
-
-.title{
+.title {
   background-color: var(--primary);
 }
 
-main{
+.main {
   background-color: var(--secondary);
   height: 90vh;
-  
 }
 
-h1{
-  font-size:var(--h1);
+h1 {
+  font-size: var(--h1);
 }
 
-h2{
-  font-size:var(--h2);
+h2 {
+  font-size: var(--h2);
 }
 
-h3{
-  font-size:var(--h3);
+h3 {
+  font-size: var(--h3);
 }
 
-h4{
-  font-size:var(--h4);
+h4 {
+  font-size: var(--h4);
 }
 
-h5{
-  font-size:var(--h5);
+h5 {
+  font-size: var(--h5);
 }
 .btn,
+.btnvg,
+.btnelec,
+.btnfig,
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -75,11 +70,9 @@ h5{
   border-radius: 10rem;
   transition: all 0.2s;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
-
-
