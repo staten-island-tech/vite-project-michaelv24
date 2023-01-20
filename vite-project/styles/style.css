@@ -3,9 +3,11 @@
 :root {
   --black: #000;
   --light-yellow: #f1ff29;
-  --dark-yellow: #b6a80f;
+  --middle-yellow: #b6a80f;
+  --dark-yellow: #595f08;
   --light-purple: #d671f8;
   --dark-purple: #7b26dc;
+  --middle-purple: #9671c0;
   --gray: #252c30;
 
   /* Typography */
@@ -19,11 +21,13 @@
 .yel {
   --primary: var(--light-yellow);
   --secondary: var(--dark-yellow);
+  --text:var(--middle-yellow)
 }
 
 .purp {
   --primary: var(--light-purple);
   --secondary: var(--dark-purple);
+  --text:var(--middle-purple);
 }
 
 .title {
@@ -32,7 +36,6 @@
 
 .main {
   background-color: var(--secondary);
-  height: 90vh;
 }
 
 h1 {
@@ -63,16 +66,46 @@ h5 {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block;
   margin: 1rem auto;
   font-size: 2rem;
   border: none;
   border-radius: 10rem;
   transition: all 0.2s;
-  display: flex;
-  flex-direction: row;
 }
-.btn:hover {
+.btn:hover,
+.btnvg:hover,
+.btnelec:hover,
+.btnfig:hover, {
   transform: translateY(-2px);
   box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+}
+.items{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  background-color:cadetblue;
+}
+.main{
+  text-align: center;
+  
+}
+
+.text{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 1.5rem 4rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.2s;
+  background-color:var(--text);
+  
+}
+.text:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.img{ 
+height: 237px;
+width: 420px;
+object-fit: contain;
 }

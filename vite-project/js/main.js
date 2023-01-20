@@ -5,11 +5,13 @@ const DOMSelectors = {
   buttonvg: document.querySelector(".btnvg"),
   buttonelec: document.querySelector(".btnelec"),
   buttonfig: document.querySelector(".btnfig"),
+  button: document.querySelector(".btn"),
   storefront: document.querySelector(".main"),
-  name: document.querySelector("name"),
-  item: document.getElementById("text"),
+  name: document.querySelector(".name"),
+  item: document.querySelector(".text"),
+  display: document.querySelector(".items"),
 };
-document.querySelector(".btn").addEventListener("click", function () {
+DOMSelectors.button.addEventListener("click", function () {
   if (document.body.classList.contains("yel")) {
     document.body.classList.add("purp");
     document.body.classList.remove("yel");
@@ -18,18 +20,14 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("purp");
   }
 });
-{
-  stock.forEach((theArr) => {
-    console.log(theArr);
-  });
-}
+
 const chooseVideoGame = function () {
   stock
     .filter((theArr) => theArr.type === "Video Game")
     .forEach((stock) =>
-      DOMSelectors.storefront.insertAdjacentHTML(
+      DOMSelectors.display.insertAdjacentHTML(
         "beforeend",
-        `<div id="text"><p>${stock.name} ${stock.type}</p></div>`
+        `<div class="text"><img class="img" src=${stock.image}><img><p>${stock.name} </p> <p>${stock.type}</p>  </div>`
       )
     );
 };
@@ -37,9 +35,9 @@ const chooseElectronic = function () {
   stock
     .filter((theArr) => theArr.type === "Electronic")
     .forEach((stock) =>
-      DOMSelectors.storefront.insertAdjacentHTML(
+      DOMSelectors.display.insertAdjacentHTML(
         "beforeend",
-        `<div id="text"><p>${stock.name} ${stock.type}</p></div>`
+        `<div class="text"><img class="img" src=${stock.image}><img><p>${stock.name} </p><p>${stock.type}</p></div>`
       )
     );
 };
@@ -47,22 +45,27 @@ const chooseFigure = function () {
   stock
     .filter((theArr) => theArr.type === "Figure")
     .forEach((stock) =>
-      DOMSelectors.storefront.insertAdjacentHTML(
+      DOMSelectors.display.insertAdjacentHTML(
         "beforeend",
-        `<div id="text"><p>${stock.name} ${stock.type}</p></div>`
+        `<div class="text"><img class="img" src=${stock.image}><img><p>${stock.name} ${stock.type}</p></div>`
       )
     );
 };
 DOMSelectors.buttonvg.addEventListener("click", function () {
+  console.log(DOMSelectors.display);
+  deleteItem();
   chooseVideoGame();
 });
 DOMSelectors.buttonelec.addEventListener("click", function () {
+  deleteItem();
   chooseElectronic();
 });
 DOMSelectors.buttonfig.addEventListener("click", function () {
+  deleteItem();
   chooseFigure();
 });
 
 const deleteItem = function () {
-  DOMSelectors.text.innerHTML = "";
+  DOMSelectors.display.innerHTML = "";
 };
+chooseVideoGame();
